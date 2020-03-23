@@ -40,9 +40,6 @@ class ZipAirplanesSerializer(serializers.Serializer):
         return ZipAirCalculations(obj).fuel_required
 
 class ZipAirlinesSerializer(serializers.Serializer):
-    '''
-    Serializer for all airplanes, with validation for max allowed planes.
-    '''
 
     airplanes = ZipAirplanesSerializer(many=True)
 
