@@ -16,9 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-api_urls = ([path('airlines/', include('zipairlines.urls'))], 'api')
-
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/v1/', include(api_urls)),
+    path('', include(router.urls)),
+    path('airplanes/', ZipAirlinesView.as_view(), name='airplane')
 ]
